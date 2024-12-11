@@ -1,0 +1,19 @@
+.whitepaper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .whitepaper-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
+  
+  .whitepaper-message {
+    font-size: 1.5rem;
+    color: #555555;
+  }

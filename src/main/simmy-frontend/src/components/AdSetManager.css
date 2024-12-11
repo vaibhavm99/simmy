@@ -1,0 +1,169 @@
+/* Container and Layout */
+.adset-manager-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif; /* Modern Font */
+    color: #333;
+  }
+  
+  /* Header */
+  .adset-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .adset-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #212529;
+  }
+  
+  .tutorial-btn {
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tutorial-btn:hover {
+    background-color: #0077b6;
+  }
+  
+  /* Ad Set Details Card */
+  .adset-details-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .title {
+    color: #00b4d8;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    align-items: left;
+  }
+  
+  /* Form Styles */
+  .adset-form .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .adset-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #495057;
+  }
+  
+  .adset-form .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .adset-form .input-field:focus {
+    border-color: #00b4d8;
+    background-color: #ffffff;
+    outline: none;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  .radio-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  /* Budget & Schedule */
+  .budget-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .amount-input {
+    width: 100px;
+    margin-left: 10px;
+  }
+  
+  .currency {
+    margin-left: 10px;
+  }
+  
+  /* Audience */
+  .audience-details p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  /* Button Styles */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border: none;
+    align-items: right;
+  }
+  
+  .continue-btn {
+    background-color: #00b4d8;
+    color: white;
+  }
+  
+  .continue-btn:hover {
+    background-color: #0077b6;
+  }
+  
+  .get-data-btn {
+    background-color: #f1f3f5;
+    color: #495057;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-data-btn:hover {
+    background-color: #e9ecef;
+  }

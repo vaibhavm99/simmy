@@ -1,0 +1,21 @@
+.features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    /* background-color: #f8f9fa; */
+    font-family: "Arial", sans-serif;
+  }
+  
+  .features-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
+  
+  .features-message {
+    font-size: 1.5rem;
+    color: #555555;
+  }

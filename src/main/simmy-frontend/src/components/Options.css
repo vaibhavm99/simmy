@@ -1,0 +1,79 @@
+/* General styling for the Options page */
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8; /* light background */
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px; /* Ensures the cards stay centered */
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensures equal size cards */
+    max-width: 400px;
+    min-width: 300px;
+    text-align: left;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Adds a hover effect to make the card look interactive */
+  }
+  
+  .card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #707070;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+    }
+  
+    .card {
+      max-width: 100%; /* Ensures the card takes the full width on smaller screens */
+    }
+  }

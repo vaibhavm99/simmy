@@ -1,0 +1,50 @@
+/* Style for the rectangle container */
+
+
+.rectangle-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    margin-bottom: 40%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style for buttons */
+.navigate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for top button container */
+.top-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+.navigate-button:hover,
+.action-button:hover {
+    opacity: 0.9;
+}

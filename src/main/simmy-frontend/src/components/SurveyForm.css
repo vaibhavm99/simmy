@@ -1,0 +1,121 @@
+.survey-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+form {
+  width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.question-step, .confirmation-step {
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3366ff;
+  color: white;
+  border: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+.bttn {
+  display: inline-block;
+  background-color: #3366ff;
+  color: white;
+  border: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2851b2;
+}
+
+.btn.back {
+  background-color: #999;
+}
+
+.btn.back:hover {
+  background-color: #777;
+}
+
+.confirmation-step h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.confirmation-step p {
+  font-size: 1.1rem;
+}
+
+
+/* Timeline container */
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.timeline-step {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.timeline-bar {
+  width: 50px;
+  height: 5px;
+  background-color: #ccc;
+}
+
+.completed {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.completed-bar {
+  background-color: #4caf50 !important;
+}

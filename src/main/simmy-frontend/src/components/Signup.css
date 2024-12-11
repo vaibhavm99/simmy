@@ -1,0 +1,86 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4ff;
+  }
+  
+  .signup-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #3366ff;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #3366ff;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .signup-btn {
+    background-color: #3366ff;
+    color: white;
+    padding: 0.75rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .signup-btn:hover {
+    background-color: #2851b2;
+  }
+  
+  a {
+    color: #3366ff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../assets/signup-background.svg'); /* Replace with the correct path */
+  background-size: cover; /* Adjusts the size of the image to cover the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+}

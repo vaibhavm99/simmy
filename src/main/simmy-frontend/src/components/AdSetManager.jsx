@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './AdSetManager.css';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'; // Import Redux hooks
+
 
 const AdSetManager = () => {
   const navigate = useNavigate();
@@ -14,6 +16,9 @@ const AdSetManager = () => {
   const [budgetType, setBudgetType] = useState('');
   const [budgetAmount, setBudgetAmount] = useState('');
   const [errors, setErrors] = useState({});
+  const user = useSelector((state) => state.user); // Access the user from the Redux store
+  const campaign = useSelector((state) => state.campaign); // Access the campaign from the Redux store
+  const dispatch = useDispatch(); // Dispatch to trigger actions
   
   const handleContinue = (e) => {
     e.preventDefault();
@@ -30,6 +35,34 @@ const AdSetManager = () => {
     setErrors(formErrors);
     
     if (Object.keys(formErrors).length === 0) {
+      // Save the ad set data to the Redux store
+      let adSetData = {
+        id: user.name + "_" + campaign.name + "_" + adSetName,
+        name: adSetName,
+        conversionEventLocation: conversionEventLocation,
+        conversionLocation: conversionLocation,
+        pixel: pixelName,
+        conversionEvent: conversionEvent,
+        budgetType: budgetType,
+        budgetAmount: budgetAmount,
+      };
+
+      dispatch({
+        type: 'SET_ADSET',
+        payload: adSetData,
+      });
+
+      console.log('Ad Set data:', adSetData);
+
+      // Send data to the backend
+      fetch(`http://localhost:${8080}/saveAdSet`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(adSetData),
+      });
+
       navigate('/adManager');
     }
   };
@@ -184,6 +217,7 @@ const AdSetManager = () => {
               value={conversionEvent}
               onChange={(e) => setConversionEvent(e.target.value)}
             >
+              <option value="">Select</option>
               <option value="conversion">Conversions</option>
             </select>
           </div>

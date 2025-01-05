@@ -6,99 +6,99 @@ import jakarta.persistence.Id;
 @Entity
 public class AdSet {
     @Id
-    private String Id;
-    private String Name;
-    private String Type;
-    private String Pixel;
-    private String ConversionEvent;
-    private String BudgetType;
-    private String BudgetAmount;
-    private String[] AdIds;
+    private String id;
+    private String name;
+    private String conversionLocation;
+    private String pixel;
+    private String conversionEvent;
+    private String budgetType;
+    private String budgetAmount;
+    private String[] adIds;
 
-    public AdSet(String id, String name, String type, String pixel, String conversionEvent, String budgetType, String budgetAmount, String[] adIds) {
-        Id = id;
-        Name = name;
-        Type = type;
-        Pixel = pixel;
-        ConversionEvent = conversionEvent;
-        BudgetType = budgetType;
-        BudgetAmount = budgetAmount;
-        AdIds = adIds;
+    public AdSet(String id, String name, String conversionLocation, String pixel, String conversionEvent, String budgetType, String budgetAmount, String[] adIds) {
+        this.id = id;
+        this.name = name;
+        this.conversionLocation = conversionLocation;
+        this.pixel = pixel;
+        this.conversionEvent = conversionEvent;
+        this.budgetType = budgetType;
+        this.budgetAmount = budgetAmount;
+        this.adIds = adIds;
     }
 
     public AdSet() {
-        Id = "-1";
-        Name = "";
-        Type = "";
-        Pixel = "";
-        ConversionEvent = "";
-        BudgetType = "";
-        BudgetAmount = "";
-        AdIds = new String[0];
+        id = "-1";
+        name = "";
+        conversionLocation = "";
+        pixel = "";
+        conversionEvent = "";
+        budgetType = "";
+        budgetAmount = "";
+        adIds = new String[0];
     }
 
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
-    public String getType() {
-        return Type;
+    public String getConversionLocation() {
+        return conversionLocation;
     }
 
-    public void setType(String type) {
-        Type = type;
+    public void setConversionLocation(String type) {
+        this.conversionLocation = type;
     }
 
     public String getPixel() {
-        return Pixel;
+        return pixel;
     }
 
     public void setPixel(String pixel) {
-        Pixel = pixel;
+        this.pixel = pixel;
     }
 
     public String getConversionEvent() {
-        return ConversionEvent;
+        return conversionEvent;
     }
 
     public void setConversionEvent(String conversionEvent) {
-        ConversionEvent = conversionEvent;
+        this.conversionEvent = conversionEvent;
     }
 
     public String getBudgetType() {
-        return BudgetType;
+        return budgetType;
     }
 
     public void setBudgetType(String budgetType) {
-        BudgetType = budgetType;
+        this.budgetType = budgetType;
     }
 
     public String getBudgetAmount() {
-        return BudgetAmount;
+        return budgetAmount;
     }
 
     public void setBudgetAmount(String budgetAmount) {
-        BudgetAmount = budgetAmount;
+        this.budgetAmount = budgetAmount;
     }
 
     public String[] getAdIds() {
-        return AdIds;
+        return adIds;
     }
 
     public void setAdIds(String[] adIds) {
-        AdIds = adIds;
+        this.adIds = adIds;
     }
 }

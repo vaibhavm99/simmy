@@ -1,7 +1,11 @@
 com/socialbysteph/simmy_backend/SimmyBackendApplication.class
 com/socialbysteph/simmy_backend/Login/AuthRepository.class
+com/socialbysteph/simmy_backend/Campaign/CampaignController.class
+com/socialbysteph/simmy_backend/Ad/Ad.class
+com/socialbysteph/simmy_backend/AdSet/AdSet.class
 com/socialbysteph/simmy_backend/Login/AuthController.class
 com/socialbysteph/simmy_backend/ClientForward/ClientForwardController.class
+com/socialbysteph/simmy_backend/Campaign/Campaign.class
 DatabaseConfig.class
 com/socialbysteph/simmy_backend/Login/SIMMYUser.class
 com/socialbysteph/simmy_backend/Login/AuthService.class

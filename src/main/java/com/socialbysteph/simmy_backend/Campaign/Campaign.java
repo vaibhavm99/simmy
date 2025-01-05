@@ -6,43 +6,54 @@ import jakarta.persistence.Id;
 @Entity
 public class Campaign {
     @Id
-    private String Id;
-    private String Objective;
-    private String[] AdSetIds;
+    private String id;
+    private String name;
+    private String objective;
+    private String[] adSetIds;
 
-    public Campaign(String objective, String id, String[] adSetIds) {
-        Objective = objective;
-        Id = id;
-        AdSetIds = adSetIds;
+    public Campaign(String objective, String id, String[] adSetIds, String name) {
+        this.objective = objective;
+        this.id = id;
+        this.adSetIds = adSetIds;
+        this.name = name;
     }
 
     public Campaign() {
-        Id = "-1";
-        Objective = "";
-        AdSetIds = new String[0];
+        this.id = "-1";
+        this.objective = "";
+        this.adSetIds = new String[0];
+        this.name = "";
     }
 
     public String getId() {
-        return Id;
-    }
-
-    public String getObjective() {
-        return Objective;
-    }
-
-    public String[] getAdSetIds() {
-        return AdSetIds;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getObjective() {
+        return objective;
     }
 
     public void setObjective(String objective) {
-        Objective = objective;
+        this.objective = objective;
+    }
+
+    public String[] getAdSetIds() {
+        return adSetIds;
     }
 
     public void setAdSetIds(String[] adSetIds) {
-        AdSetIds = adSetIds;
+        this.adSetIds = adSetIds;
     }
 }

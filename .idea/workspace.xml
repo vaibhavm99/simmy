@@ -6,6 +6,53 @@
   <component name="ChangeListManager">
     <list default="true" id="d756aaaf-ca81-494c-9820-f8fb232bd8ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/Campaign/Campaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/Campaign/Campaign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/SimmyBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/SimmyBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/socialbysteph/simmy_backend/SimmyBackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/socialbysteph/simmy_backend/SimmyBackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/css/main.c98633bd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/css/main.c98633bd.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/453.7384a9ad.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/453.7384a9ad.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.1f461d8b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.1f461d8b.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.1f461d8b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.2f2af35e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.2f2af35e.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.2f2af35e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.541b3cda.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.541b3cda.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.541b3cda.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.8f086ab1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.8f086ab1.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.8f086ab1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.9c17906f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.9c17906f.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.9c17906f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.a1e01fe0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.a1e01fe0.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.a1e01fe0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.b5a5eef1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.b5a5eef1.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.b5a5eef1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.b5fb74a9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.b5fb74a9.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.b5fb74a9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.c6b1c65a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.c6b1c65a.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/js/main.c6b1c65a.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/media/banner.cea63ffc37efebb0e0d4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/media/learn_without_risk.cec7acd9b99b5a1a3dae.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/media/master_meta_ads.21288c39483729a5d607.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/media/realistic_simulations.0de9503c629bb20c4a3f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/static/media/signup-background.fae0ea75da982ed85303.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +137,7 @@
       <workItem from="1727215730236" duration="142000" />
       <workItem from="1732749661142" duration="5265000" />
       <workItem from="1736036164668" duration="1347000" />
-      <workItem from="1736037546634" duration="1373000" />
+      <workItem from="1736037546634" duration="5974000" />
     </task>
     <servers />
   </component>

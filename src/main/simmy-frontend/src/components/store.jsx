@@ -9,6 +9,7 @@ const initialState = {
     Id: '-1', // Campaign ID
     Objective: '', // Campaign objective
     AdSetIds: [], // Array of AdSet IDs
+    Name: '', // Campaign name
   },
   adset: {
     Id: '',

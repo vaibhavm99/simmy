@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import './CampaignManager.css';
 import NavbarComponent from './Navbar';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'; // Import Redux hooks
+
 
 
 const CampaignManager = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch(); 
   const [campaignName, setCampaignName] = useState('');
   const [campaignObjective, setCampaignObjective] = useState('');
   const [errors, setErrors] = useState({ name: '', objective: '' });
+  const user = useSelector((state) => state.user); // Access the user from the Redux store
 
   const handleContinue = (e) => {
     e.preventDefault();
@@ -28,6 +32,29 @@ const CampaignManager = () => {
     setErrors(newErrors);
 
     if (!hasError) {
+      // Save the campaign data to the Redux store
+      let campaignData = {
+        id: user.name + "_" + campaignName,
+        objective: campaignObjective,
+        adSetIds: [],
+        name: campaignName,
+      };
+      dispatch({
+        type: 'SET_CAMPAIGN',
+        payload: campaignData,
+      });
+      console.log('Campaign data:', campaignData);
+      // console.log(user.username + "_" + campaignName);
+
+      // Send data to the backend
+      fetch(`http://localhost:${8080}/saveCampaign`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(campaignData),
+      });
+
       navigate('/AdSetManager');
     }
   };

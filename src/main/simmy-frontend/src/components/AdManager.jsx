@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './AdManager.css'; // Make sure to create this file for styles
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'; // Import Redux hooks
+
 
 const AdManager = () => {
   const [adName, setAdName] = useState('');
@@ -11,6 +13,10 @@ const AdManager = () => {
   const [description, setDescription] = useState('');
   const [callToAction, setCallToAction] = useState('');
 
+  const user = useSelector((state) => state.user); // Access the user from the Redux store
+  const campaign = useSelector((state) => state.campaign); // Access the campaign from the Redux store
+  const adset = useSelector((state) => state.adset); // Access the adset from the Redux store
+  const dispatch = useDispatch(); // Dispatch to trigger actions
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -25,7 +31,52 @@ const AdManager = () => {
       description,
       callToAction,
     });
-    navigate('/dashboard')
+
+    let formErrors = {};
+    if (!adName) formErrors.adName = 'Ad Name is required';
+    if (!primaryText) formErrors.primaryText = 'Primary Text is required';
+    if (!headline) formErrors.headline = 'Headline is required';
+    if (!description) formErrors.description = 'Description is required';
+    if (!callToAction) formErrors.callToAction = 'Call to Action is required';
+    if (!adSetup) formErrors.adSetup = 'Ad Setup is required';
+    if (!format) formErrors.format = 'Format is required';
+
+    if (Object.keys(formErrors).length > 0) {
+      console.log('Form errors:', formErrors);
+    } else {
+      let adData = {
+        id: user.name + "_" + campaign.name + "_" + adset.name + "_" + adName,
+        name : adName,
+        adSetup: adSetup,
+        format: format,
+        text: primaryText,
+        headline: headline,
+        description: description,
+        callToAction: callToAction,
+        image: '',
+        video: '',
+      };
+
+      console.log('Ad data:', adData);
+
+      dispatch({
+        type: 'SET_AD',
+        payload: adData,
+      });
+
+      // Send data to the backend
+      fetch(`http://localhost:${8080}/saveAd`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(adData),
+      });
+
+      // Redirect to the dashboard page after successful submission
+    navigate('/dashboard');
+  }
+
   };
 
   return (

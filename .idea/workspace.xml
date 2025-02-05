@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d756aaaf-ca81-494c-9820-f8fb232bd8ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/AdSet/AdSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/AdSet/AdSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/Ad/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/socialbysteph/simmy_backend/Ad/Ad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/socialbysteph/simmy_backend/AdSet/AdSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/socialbysteph/simmy_backend/AdSet/AdSet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +93,7 @@
       <workItem from="1727215730236" duration="142000" />
       <workItem from="1732749661142" duration="5265000" />
       <workItem from="1736036164668" duration="1347000" />
-      <workItem from="1736037546634" duration="7380000" />
+      <workItem from="1736037546634" duration="12461000" />
     </task>
     <servers />
   </component>

@@ -6,121 +6,121 @@ import jakarta.persistence.Id;
 @Entity
 public class Ad {
     @Id
-    private String Id;
-    private String Name;
-    private String AdSetup;
-    private String Format;
-    private String Text;
-    private String Headline;
-    private String Description;
-    private String CallToAction;
-    private String Image;
-    private String Video;
+    private String id;
+    private String name;
+    private String adSetup;
+    private String format;
+    private String text;
+    private String headline;
+    private String description;
+    private String callToAction;
+    private String image;
+    private String video;
 
     public Ad(String id, String name, String adSetup, String format, String text, String headline, String description, String callToAction, String image, String video) {
-        Id = id;
-        Name = name;
-        AdSetup = adSetup;
-        Format = format;
-        Text = text;
-        Headline = headline;
-        Description = description;
-        CallToAction = callToAction;
-        Image = image;
-        Video = video;
+        this.id = id;
+        this.name = name;
+        this.adSetup = adSetup;
+        this.format = format;
+        this.text = text;
+        this.headline = headline;
+        this.description = description;
+        this.callToAction = callToAction;
+        this.image = image;
+        this.video = video;
     }
 
     public Ad() {
-        Id = "-1";
-        Name = "";
-        AdSetup = "";
-        Format = "";
-        Text = "";
-        Headline = "";
-        Description = "";
-        CallToAction = "";
-        Image = "";
-        Video = "";
+        id = "-1";
+        name = "";
+        adSetup = "";
+        format = "";
+        text = "";
+        headline = "";
+        description = "";
+        callToAction = "";
+        image = "";
+        video = "";
     }
 
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getAdSetup() {
-        return AdSetup;
+        return adSetup;
     }
 
     public void setAdSetup(String adSetup) {
-        AdSetup = adSetup;
+        this.adSetup = adSetup;
     }
 
     public String getFormat() {
-        return Format;
+        return format;
     }
 
     public void setFormat(String format) {
-        Format = format;
+        this.format = format;
     }
 
     public String getText() {
-        return Text;
+        return text;
     }
 
     public void setText(String text) {
-        Text = text;
+        this.text = text;
     }
 
     public String getHeadline() {
-        return Headline;
+        return headline;
     }
 
     public void setHeadline(String headline) {
-        Headline = headline;
+        this.headline = headline;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getCallToAction() {
-        return CallToAction;
+        return callToAction;
     }
 
     public void setCallToAction(String callToAction) {
-        CallToAction = callToAction;
+        this.callToAction = callToAction;
     }
 
     public String getImage() {
-        return Image;
+        return image;
     }
 
     public void setImage(String image) {
-        Image = image;
+        this.image = image;
     }
 
     public String getVideo() {
-        return Video;
+        return video;
     }
 
     public void setVideo(String video) {
-        Video = video;
+        this.video = video;
     }
 }

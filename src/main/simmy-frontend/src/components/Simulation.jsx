@@ -135,7 +135,7 @@ export default function Simulation () {
                 {(a1data.length > 0) && 
                   <div className="rectangle-container">
                     <p>Age range: {a1data[0]}</p>
-                    <p>Demographic: {a1data[1]}</p>
+                    <p>Gender: {a1data[1]}</p>
                     <div>Tags: {a1data[2].slice(0,10).map((x, _) => <Badge>{x}</Badge>)} </div>
                   </div>
                 }

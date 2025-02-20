@@ -1,206 +1,277 @@
 /* General Page Layout */
 .dashboard-page {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9fafb;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Navbar */
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 2vh 3vw;
+  box-shadow: 0 0.3vh 1vh rgba(0, 0, 0, 0.05);
+  height: 8vh;
+  width: 100vw;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.logo img {
+  height: 3vh;
+  padding-left: 5vw;
+  max-width: 100%;
+}
+
+.navbar-right a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.6vh;
+  font-weight: 500;
+}
+
+.navbar-right a:hover {
+  color: #007bff;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  padding-right: 5vw;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1.6vh;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 4vh;
+  background-color: white;
+  box-shadow: 0 0.3vh 1vh rgba(0, 0, 0, 0.1);
+  border-radius: 0.5vh;
+  padding: 1vh;
+  min-width: 15vw;
+  max-width: 20vw;
+  display: none; /* This ensures the dropdown is hidden by default */
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+  padding-right: 5vw;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 1vh;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.4vh;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Main Content and Styling */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 4vw;
+  border-bottom: 0.1vh solid #ddd;
+  background-color: white;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 3.2vh;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5vw;
+}
+
+.btn {
+  padding: 1.2vh 2vw;
+  border: none;
+  border-radius: 1vh;
+  font-size: 1.4vh;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-top: 3vh;
+  padding-left: 4vw;
+}
+
+.tab {
+  padding: 1.2vh 2vw;
+  margin-right: 1.5vw;
+  font-size: 1.6vh;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 0.2vh solid transparent;
+}
+
+.tab.active {
+  border-bottom: 0.2vh solid #007bff;
+  color: #007bff;
+}
+
+.tab:hover {
+  color: #007bff;
+}
+
+/* Table Container */
+.table-container {
+  background-color: white;
+  padding: 2vh 4vw;
+  margin: 2vh 4vw;
+  border-radius: 1vh;
+  box-shadow: 0 0.3vh 1vh rgba(0, 0, 0, 0.05);
+  max-height: 50vh; /* Set a max height */
+  overflow-y: auto; /* Add vertical scroll when the table exceeds max height */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 1.6vh; /* Reduced font size */
+}
+
+thead th {
+  padding: 1vh 1vw;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  background-color: #f9fafb;
+  border-bottom: 0.1vh solid #ddd;
+  word-wrap: break-word; /* Ensures long content wraps inside cells */
+  font-size: 1.4vh; /* Reduce header font size */
+}
+
+tbody td {
+  padding: 1vh 1vw;
+  border-bottom: 0.1vh solid #ddd;
+  word-wrap: break-word;
+  font-size: 1.4vh; /* Reduce body font size */
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+tbody td.green {
+  color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 20px 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    height: 80px;
-    
-  }
-  
-  .navbar-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .logo img {
-    height: 30px;
-    padding-left: 100px;
-  }
-  
-  .navbar-right a {
-    color: #333;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .navbar-right a:hover {
-    color: #007bff;
-  }
-  
-  /* Dropdown */
-  .dropdown {
-    position: relative;
-    padding-right: 100px;
-  }
-  
-  .dropdown-toggle {
-    background: none;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    right: 0;
-    top: 30px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px;
-    min-width: 150px;
-    max-width: 200px;
-    display: none; /* This ensures the dropdown is hidden by default */
-  }
-  
-  .dropdown.open .dropdown-menu {
-    display: block; /* Display the menu when the dropdown is open */
-    padding-right: 100px;
-  }
-  
-  .dropdown-menu a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Main Content and Styling */
-  .header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px;
-    border-bottom: 1px solid #ddd;
-    background-color: white;
-  }
-  
-  h1 {
-    font-size: 32px;
-    color: #333;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .btn-success {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-  }
-  
-  .btn:hover {
-    opacity: 0.9;
-  }
-  
-  /* Tabs */
-  .tabs {
-    display: flex;
-    margin-top: 30px;
-    padding-left: 40px;
-  }
-  
-  .tab {
-    padding: 12px 20px;
-    margin-right: 15px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-  }
-  
-  .tab.active {
-    border-bottom: 2px solid #007bff;
-    color: #007bff;
-  }
-  
-  .tab:hover {
-    color: #007bff;
-  }
-  
-  /* Table Container */
-  .table-container {
-    background-color: white;
-    padding: 2% 4%;
-    margin: 2% 4%;
-    border-radius: 1%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    max-height: 500px; /* Set a max height */
-    overflow-y: auto; /* Add vertical scroll when the table exceeds max height */
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-  
-  thead th {
-    padding: 12px 15px;
-    text-align: left;
-    font-weight: 600;
-    color: #555;
-    background-color: #f9fafb;
-    border-bottom: 1px solid #ddd;
-    word-wrap: break-word; /* Ensures long content wraps inside cells */
+      flex-direction: column;
+      height: auto;
+      padding: 2vh;
   }
 
-  
+  .navbar-right {
+      flex-direction: column;
+      gap: 1vh;
+  }
+
+  .logo img {
+      padding-left: 0;
+  }
+
+  .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2vh;
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 1vh;
+      width: 100%;
+  }
+
+  .tab {
+      font-size: 1.4vh;
+      padding: 1vh;
+  }
+
+  .table-container {
+      padding: 1vh 2vw;
+      margin: 1vh 2vw;
+      max-height: 60vh;
+  }
+
+  .dropdown {
+      padding-right: 0;
+  }
+
+  .dropdown-menu {
+      min-width: 50vw;
+  }
+
+  /* Responsive Table Adjustments */
+  table {
+      font-size: 1vh;
+  }
+
+  thead th {
+      font-size: 1vh;
+      padding: 0.8vh 0.8vw;
+  }
+
   tbody td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
-    word-wrap: break-word; /* Ensures long content wraps inside cells */
+      font-size: 1vh;
+      padding: 0.8vh 0.8vw;
   }
-  
-  tbody tr:hover {
-    background-color: #f9f9f9;
-  }
-  
-  tbody td.green {
-    color: green;
-  }
+}

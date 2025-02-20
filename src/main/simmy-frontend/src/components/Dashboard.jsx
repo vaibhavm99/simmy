@@ -877,11 +877,7 @@ const Dashboard = () => {
       <button className='btn btn-primary' style={{ position: 'absolute', right: '5%' }}onClick={() => navigate('/CampaignManager')}>Create Campaign</button>
 
     </div>
-        {/* <div className="tabs">
-          <button className='tab active'>Campaigns</button>
-          <button className="tab">Ad Sets</button>
-          <button className="tab">Ads</button>
-        </div> */}
+       
 
         {/* Table */}
         <div className="table-container">

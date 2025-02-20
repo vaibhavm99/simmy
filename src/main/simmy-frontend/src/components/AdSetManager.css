@@ -1,169 +1,241 @@
-/* Container and Layout */
+/* General Styles */
 .adset-manager-container {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh;
+  background-color: #f4f7fc;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+}
+
+/* Header */
+.adset-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  max-width: 1200px;
+}
+
+.adset-header h2 {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #212529;
+}
+
+.tutorial-btn {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 1.5vh 3vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  font-size: 1.8vw;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.tutorial-btn:hover {
+  background-color: #0077b6;
+}
+
+/* Ad Set Details Card */
+.adset-details-card {
+  background-color: white;
+  padding: 4vh 5vw;
+  border-radius: 1.5vw;
+  box-shadow: 0 0.5vh 2vw rgba(0, 0, 0, 0.1);
+  width: 50vw;
+  max-width: 600px;
+  min-width: 320px;
+  margin-top: 3vh;
+}
+
+/* Title */
+.title {
+  color: #00b4d8;
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+/* Form Styling */
+.adset-form {
+  width: 100%;
+}
+
+/* Form Groups */
+.adset-form .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh;
+}
+
+/* Labels */
+.adset-form label {
+  font-size: 1.5vw;
+  margin-bottom: 1vh;
+  color: #495057;
+}
+
+/* Input Fields */
+.adset-form .input-field {
+  width: 100%;
+  padding: 1.5vh;
+  font-size: 1.8vw;
+  border: 0.2vw solid #ced4da;
+  border-radius: 0.8vw;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.adset-form .input-field:focus {
+  border-color: #00b4d8;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* Description Text */
+.description {
+  font-size: 1.2vw;
+  color: #6c757d;
+  margin-top: -1vh;
+  margin-bottom: 2vh;
+}
+
+/* Radio Button Group */
+.radio-group label {
+  display: block;
+  font-size: 1.5vw;
+  margin-bottom: 1vh;
+}
+
+/* Budget & Schedule */
+.budget-input {
+  display: flex;
+  align-items: center;
+}
+
+.amount-input {
+  width: 10vw;
+  margin-left: 1vw;
+}
+
+.currency {
+  margin-left: 1vw;
+}
+
+/* Audience Details */
+.audience-details p {
+  margin: 0.5vh 0;
+  font-size: 1.5vw;
+}
+
+/* Button Styles */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+
+.btn {
+  padding: 1.5vh 3vw;
+  font-size: 1.8vw;
+  font-weight: 500;
+  border-radius: 0.8vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.continue-btn {
+  background-color: #00b4d8;
+  color: white;
+}
+
+.continue-btn:hover {
+  background-color: #0077b6;
+}
+
+.get-data-btn {
+  background-color: #f1f3f5;
+  color: #495057;
+  padding: 1.5vh;
+  border-radius: 0.8vw;
+  margin-top: 1vh;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-size: 1.5vw;
+  transition: background-color 0.3s ease;
+}
+
+.get-data-btn:hover {
+  background-color: #e9ecef;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4vh;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1.5vw;
+  color: #666;
+}
+
+.footer a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* 📌 Responsive Fixes */
+@media (max-width: 768px) {
+  .adset-header {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-color: #f4f7fc;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif; /* Modern Font */
-    color: #333;
-  }
-  
-  /* Header */
-  .adset-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .adset-header h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #212529;
-  }
-  
-  .tutorial-btn {
-    background-color: #00b4d8;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .tutorial-btn:hover {
-    background-color: #0077b6;
-  }
-  
-  /* Ad Set Details Card */
-  .adset-details-card {
-    background-color: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 100%;
-    margin-top: 30px;
-  }
-  
-  .title {
-    color: #00b4d8;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    align-items: left;
-  }
-  
-  /* Form Styles */
-  .adset-form .form-group {
-    margin-bottom: 24px;
-  }
-  
-  .adset-form label {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #495057;
-  }
-  
-  .adset-form .input-field {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    background-color: #f8f9fa;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .adset-form .input-field:focus {
-    border-color: #00b4d8;
-    background-color: #ffffff;
-    outline: none;
-  }
-  
-  .description {
-    font-size: 14px;
-    color: #6c757d;
-    margin-top: -10px;
-    margin-bottom: 20px;
-  }
-  
-  .radio-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  /* Budget & Schedule */
-  .budget-input {
-    display: flex;
-    align-items: center;
-  }
-  
-  .amount-input {
-    width: 100px;
-    margin-left: 10px;
-  }
-  
-  .currency {
-    margin-left: 10px;
-  }
-  
-  /* Audience */
-  .audience-details p {
-    margin: 5px 0;
-    font-size: 16px;
-  }
-  
-  /* Button Styles */
-  .form-actions {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .btn {
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    border: none;
-    align-items: right;
-  }
-  
-  .continue-btn {
-    background-color: #00b4d8;
-    color: white;
-  }
-  
-  .continue-btn:hover {
-    background-color: #0077b6;
-  }
-  
-  .get-data-btn {
-    background-color: #f1f3f5;
-    color: #495057;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-    display: block;
     text-align: center;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
   }
-  
-  .get-data-btn:hover {
-    background-color: #e9ecef;
+
+  .adset-header h2 {
+    font-size: 5vw;
   }
+
+  .adset-details-card {
+    width: 90vw;
+    padding: 6vh 6vw;
+  }
+
+  .title {
+    font-size: 4vw;
+  }
+
+  .adset-form label {
+    font-size: 3vw;
+  }
+
+  .adset-form .input-field {
+    font-size: 3vw;
+    padding: 2vh;
+  }
+
+  .btn {
+    font-size: 3vw;
+    padding: 2vh 5vw;
+  }
+
+  .footer p {
+    font-size: 2.5vw;
+  }
+}

@@ -9,6 +9,8 @@ import cpcCpa from '../assets/cpc_cpa_savings.png'; // Adjust the path as needed
 import creativeContent from '../assets/creative_content.png'; // Adjust the path as needed
 import adSpend from '../assets/ad_spend_optimization.png'; // Adjust the path as needed
 import NavbarComponent from './Navbar';
+import './Home.css';
+
 
 
 const Home = () => {
@@ -18,25 +20,29 @@ const Home = () => {
        
          <NavbarComponent />  
 
-       <div class="container">
-          <div class="text">
-             <div class="col-md-6">
-                <h1 class="mb-3">Eliminate risk with running digital ads</h1>
-                <p class="mb-3">Welcome to SiMMY! Introducing our cutting-edge Digital Ads Simulator - the ultimate tool for mastering Meta ads and honing your advertising skills without the fear of risking real money. SiMMY provides a realistic and risk-free environment to practice campaign management strategies.</p>
-                <a class="btn btn-primary mt-2 py-3 px-5" href="/signup">Get Started</a>
-             </div>
+    <div className="container">
+          
+          <div className="text">
+            <h1 className="mb-3">Eliminate risk with running digital ads</h1>
+            <p className="mb-3">
+              Welcome to SiMMY! Introducing our cutting-edge Digital Ads Simulator - the ultimate tool for mastering Meta ads and honing your advertising skills without the fear of risking real money. SiMMY provides a realistic and risk-free environment...
+            </p>
+            <a className="btn btn-primary mt-2 py-3 px-5" href="/signup">Get Started</a>
           </div>
-          <div class="image">
-             <img src={bannerImage} alt="Banner" style={{height: "auto", width: "auto", maxWidth: "500px", maxHeight: "500px"}} />
+          
+          <div className="image">
+            <img src={bannerImage} alt="Banner" />
           </div>
-       </div>
-    </div >
 
+        </div>
+    </div>
+
+       
 
     <div className="white-bg">
        <div class="container">
           <div class="image">
-             <img src={learnWithoutRisk} alt="Learn without Risk" style={{height: "auto", width: "auto", maxWidth: "500px", maxHeight: "500px"}} />
+             <img src={learnWithoutRisk} alt="Learn without Risk" style={{height: "auto", width: "auto", maxWidth: "40vw", maxHeight: "40vh", paddingRight: "10vw"}} />
           </div>
           <div class="col-md-6">
              <h1 class="mb-3">Learn Without Risk</h1>
@@ -55,7 +61,7 @@ const Home = () => {
           </div>
 
           <div class="image">
-             <img src={realisticSimulations} alt="Realistic Simulations" style={{height: "auto", width: "auto", maxWidth: "500px", maxHeight: "500px"}} />
+             <img src={realisticSimulations} alt="Realistic Simulations" style={{height: "auto", width: "auto", maxWidth: "40vw", maxHeight: "40vh"}} />
           </div>
        </div>
     </div>
@@ -64,7 +70,7 @@ const Home = () => {
     <div className="white-bg">
        <div class="container">
           <div class="image">
-             <img src={masterMetaAds} alt="Master Meta Ads" style={{height: "auto", width: "auto", maxWidth: "500px", maxHeight: "500px"}} />
+             <img src={masterMetaAds} alt="Master Meta Ads" style={{height: "auto", width: "auto", maxWidth: "40vw", maxHeight: "40vh", paddingRight: "3vw"}} />
           </div>
           <div class="col-md-6">
              <h1 class="mb-3">Master Meta Ads</h1>
@@ -81,14 +87,14 @@ const Home = () => {
     </div>
 
 
-    <div class="heading w-50 text-center mx-auto pb-5 mob-header" style={{padding:"2%"}}>
+    <div class="heading text-center mx-auto pb-5 mob-header" style={{padding:"2%"}}>
       <h2 className="px-5 mb-4">Use Ad Management Platforms like a Pro</h2>
       <p>we obsess over the delivery of tangible results such as leads & sales. metrics that impact your bottom line. our approach remains unchanged across our services from seo, social media marketing to web & app development.</p>
 
       
     </div>
 
-
+{/* 
 
     <div class="container-grid">
     <div class="card">
@@ -139,6 +145,61 @@ const Home = () => {
                     we help your website appears on top of search results without paying a penny to google.
                 </div>
                 <div class="link"><a href="#">read more</a></div>
+            </div>
+        </div>
+    </div>
+</div> */}
+
+
+<div class="cards-container-grid">
+    <div class="cards-card">
+        <div class="cards-card-content">
+            <div class="cards-icon"><img src={campaignAnalysis} alt="campaign analysis icon" /></div>
+            <div class="cards-text-content">
+                <div class="cards-title">campaign analysis</div>
+                <div class="cards-description">
+                    we help you to promote your brand to billions of users on instagram, facebook, and twitter with the best strategies.
+                </div>
+                <div class="cards-link"><a href="#">read more</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cards-card">
+        <div class="cards-card-content">
+            <div class="cards-icon"><img src={cpcCpa} alt="cpc & cpa savings icon"/></div>
+            <div class="cards-text-content">
+                <div class="cards-title">cpc & cpa savings</div>
+                <div class="cards-description">
+                    we help your website appear on top of search results without paying a penny to google.
+                </div>
+                <div class="cards-link"><a href="#">read more</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cards-card">
+        <div class="cards-card-content">
+            <div class="cards-icon"><img src={creativeContent} alt="creative content icon"/></div>
+            <div class="cards-text-content">
+                <div class="cards-title">creative content</div>
+                <div class="cards-description">
+                    we create out-of-the-box content for your audience that brings value to generating the right traffic.
+                </div>
+                <div class="cards-link"><a href="#">read more</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cards-card">
+        <div class="cards-card-content">
+            <div class="cards-icon"><img src={adSpend} alt="ad spend optimization icon"/></div>
+            <div class="cards-text-content">
+                <div class="cards-title">ad spend optimization</div>
+                <div class="cards-description">
+                    we help your website appear on top of search results without paying a penny to google.
+                </div>
+                <div class="cards-link"><a href="#">read more</a></div>
             </div>
         </div>
     </div>

@@ -1,0 +1,37 @@
+.footer-card {
+    width: 100vw; /* Ensures full viewport width */
+    padding: 2vh 5vw;
+    background: #222;
+    color: white; /* Ensures all text is white */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    box-sizing: border-box; /* Prevents content from overflowing */
+  }
+  
+  .footer-bottom {
+    width: 100%; /* Ensures it stays within the footer */
+    text-align: center; /* Centers the text */
+    padding: 1vh 0;
+    color: white; /* Ensures text remains white */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Adds subtle separation */
+  }
+  
+  .footer-logo img {
+    max-width: 12vw; /* Ensures it scales properly */
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Ensures all text aligns center on mobile */
+    }
+  
+    .footer-bottom {
+      padding-bottom: 1vh; /* Prevents clipping at the bottom */
+    }
+  }
+  

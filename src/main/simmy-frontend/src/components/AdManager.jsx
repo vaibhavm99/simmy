@@ -3,7 +3,6 @@ import './AdManager.css'; // Make sure to create this file for styles
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'; // Import Redux hooks
 
-
 const AdManager = () => {
   const [adName, setAdName] = useState('');
   const [adSetup, setAdSetup] = useState('Create Ad');

@@ -1,4 +1,4 @@
-import { LineChart } from "@mui/x-charts";
+import { ChartContainer, LineChart, ChartsLegend } from "@mui/x-charts";
 import "./Dashboard.css";
 import React, { useState } from 'react';
 import logo from '../assets/Simmy Logo.png'; // Adjust the path as needed
@@ -125,60 +125,76 @@ export default function Simulation () {
       </nav>
 
     <Container>
-
+    {(a1data.length > 0) && 
       <Row>
-        <Col>
-        <Card style={{ width: '35rem' }}>
+        <Card style={{ width: '85vw', marginLeft: '2.5vw' }}>
           <Card.Body>
             <Card.Title>Audience A1</Card.Title>
             <Card.Text>
-                {(a1data.length > 0) && 
-                  <div className="rectangle-container">
-                    <p>Age range: {a1data[0]}</p>
-                    <p>Gender: {a1data[1]}</p>
+                <Row xs={1} md={2}>
+                  <div className="rectangle-container" style={{width: '45%'}}>
+                    <p>Store: <Badge>{formData.storeName}</Badge></p>
+                    <p>Website: <Badge>{formData.webUrl}</Badge></p>
+                    <p>industry: {formData.industry.split(",").map((x) => <Badge>{x}</Badge>)}</p>
+                    <p>description: {formData.description}</p>
+                    <p>items: {formData.items}</p>
+                  </div>
+                  <div className="rectangle-container" style={{width: '45%'}}>
+                    <p>Age range: <Badge>{a1data[0]}</Badge></p>
+                    <p>Gender: <Badge>{a1data[1]}</Badge></p>
                     <div>Tags: {a1data[2].slice(0,10).map((x, _) => <Badge>{x}</Badge>)} </div>
                   </div>
-                }
+                    <Button style={{width: '97.5%'}} variant="primary" disabled={isLoading} onClick={() => processInput()}>{isLoading ? simulationText : "Simulate!"}</Button>
+                </Row>
             </Card.Text>
-            <Button variant="primary" disabled={isLoading} onClick={() => processInput()}>{isLoading ? simulationText : "Simulate!"}</Button>
           </Card.Body>
         </Card>
-    </Col>
-    <Col>
-    <Row>
-    { displayChart && <div className="Simulation">
+    <Row style={{marginTop: '5vh'}}>
+    { displayChart && <div className="Simulation" style={{width: '80vw', marginLeft: '5vw'}}>
         <LineChart
-          xAxis={[{ data: ["Jan 1", "Jan 15", "Feb 1", "Feb 15", "Mar 1", "Mar 15", "Apr 1", "Apr 15", "May 1", "May 15", "June 1", "June 15", "July 1", "July 15", "Aug 1", "Aug 15", "Sep 1", "Sep 15", "Oct 1", "Oct 15", "Nov 1", "Nov 15", "Dec 1", "Dec 15", "Dec 31"], scaleType: "point", label: "Month" }]}
+          xAxis={[{ data: ["Jan 1", "Jan 15", "Feb 1", "Feb 15", "Mar 1", "Mar 15", "Apr 1", "Apr 15", "May 1", "May 15", "June 1", "June 15", "July 1", "July 15", "Aug 1", "Aug 15", "Sep 1", "Sep 15", "Oct 1", "Oct 15", "Nov 1", "Nov 15", "Dec 1", "Dec 15", "Dec 31"], scaleType: "point", label: "Month", tickLabelInterval: ((_, index) => index%2 == 0) }]}
           leftAxis={null}
           series={[
             {
-              data: predictions.map((x, _) => x[0]), label: "Reach (millions)"
+              data: predictions.map((x, _) => x[0]), label: "Reach (millions)",
             },
           ]}
-          width={800}
           height={300}
+            slotProps={{
+                popper: {
+                  sx: {
+                    width: '400px'
+                  },
+                },
+            }}
         />
       </div>
     }
     </Row>
     <Row>
-    { displayChart && <div className="Simulation">
+    { displayChart && <div className="Simulation" style={{width: '80vw', marginLeft: '5vw'}}>
         <LineChart
-          xAxis={[{ data: ["Jan 1", "Jan 15", "Feb 1", "Feb 15", "Mar 1", "Mar 15", "Apr 1", "Apr 15", "May 1", "May 15", "June 1", "June 15", "July 1", "July 15", "Aug 1", "Aug 15", "Sep 1", "Sep 15", "Oct 1", "Oct 15", "Nov 1", "Nov 15", "Dec 1", "Dec 15", "Dec 31"], scaleType: "point", label: "Month" }]}
+          xAxis={[{ data: ["Jan 1", "Jan 15", "Feb 1", "Feb 15", "Mar 1", "Mar 15", "Apr 1", "Apr 15", "May 1", "May 15", "June 1", "June 15", "July 1", "July 15", "Aug 1", "Aug 15", "Sep 1", "Sep 15", "Oct 1", "Oct 15", "Nov 1", "Nov 15", "Dec 1", "Dec 15", "Dec 31"], scaleType: "point", label: "Month", tickLabelInterval: ((_, index) => index%2 == 0) }]}
           leftAxis={null}
           series={[
             {
               data: predictions.map((x, _) => x[1]), label: "Impressions (millions)"
             },
           ]}
-          width={800}
           height={300}
+        slotProps={{
+                popper: {
+                  sx: {
+                    width: '400px'
+                  },
+                },
+            }}
+
         />
       </div>
     }
     </Row>
-</Col>
-    </Row>
+    </Row>}
     </Container>
     </div>
   )

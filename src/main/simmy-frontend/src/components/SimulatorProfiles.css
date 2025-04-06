@@ -7,25 +7,14 @@
     padding: 20px;
     margin: 20px auto;
     width: 80%;
-    margin-bottom: 40%;
     max-width: 600px;
+    min-width: 300px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 /* Style for buttons */
-.navigate-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
 .action-button {
     padding: 10px 20px;

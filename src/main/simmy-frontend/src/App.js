@@ -52,7 +52,6 @@ const App = () => {
     <Router>
       
       <div style={{ backgroundColor: '#ebf5ff'}}>
-        <main>
         <FormContext.Provider value={{formData,setFormData}}>
         <ProfileUpdated.Provider value={{updated,setUpdated}}>
         <AudienceContext.Provider value={{a1data, setA1data}}>
@@ -87,8 +86,6 @@ const App = () => {
           </AudienceContext.Provider>
           </ProfileUpdated.Provider>
           </FormContext.Provider>
-        </main>
-        <div style={{padding: "5%"}}/>
         <Footer />
       </div>
     </Router>

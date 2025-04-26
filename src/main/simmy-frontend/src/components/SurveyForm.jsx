@@ -54,7 +54,8 @@ const SurveyForm = () => {
     function sendtoDB() {
       // Send the survey data to the backend
       let port = process.env.BACKEND_PORT;
-      fetch(`http://localhost:${8080}/register`, {
+      const BASE_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8080';
+      fetch(`${BASE_URL}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

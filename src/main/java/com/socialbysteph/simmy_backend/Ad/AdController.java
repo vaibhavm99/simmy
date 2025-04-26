@@ -9,7 +9,7 @@ public class AdController {
     @Autowired
     private AdService adService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = {"http://localhost:3000", "https://newsimmy-645314c66057.herokuapp.com"})
     @RequestMapping(method = RequestMethod.POST, path = "/saveAd")
     public boolean createAd(@RequestBody Ad ad) {
         adService.createAd(ad);

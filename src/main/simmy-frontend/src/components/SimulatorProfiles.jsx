@@ -84,7 +84,7 @@ const SimulatorProfiles = () => {
             {/* Button at the top to navigate to new simulator profile */}
             <div className="top-button-container">
                 <h2>Welcome to Simmy Simulator !</h2>
-                <button className="navigate-button" onClick={() => redirectTo('/simulator-profiles-new')}>
+                <button className="navigate-button" disabled={updated} onClick={() => { setUpdated(false); redirectTo('/simulator-profiles-new')}}>
                     Update Simulator Profile
                 </button>
             </div>
@@ -95,8 +95,8 @@ const SimulatorProfiles = () => {
                 <p>This section contains details about the Audiences.</p>
                 {(a1data.length > 0) && 
                   <div className="rectangle-container">
-                    <p>Age range: {a1data[0]}</p>
-                    <p>Gender: {a1data[1]}</p>
+                    <p>Age range: <Badge>{a1data[0]}</Badge></p>
+                    <p>Gender: <Badge>{a1data[1]}</Badge></p>
                     <div>Tags: {a1data[2].slice(0, 10).map((x, _) => <Badge>{x}</Badge>)} </div>
                   </div>
                 }

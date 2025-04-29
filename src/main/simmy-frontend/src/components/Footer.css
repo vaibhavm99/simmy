@@ -1,5 +1,5 @@
 .footer-card {
-    width: 100vw; /* Ensures full viewport width */
+    width: 95vw; /* Ensures full viewport width */
     padding: 2vh 5vw;
     background: #222;
     color: white; /* Ensures all text is white */
@@ -7,7 +7,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: start;
-    box-sizing: border-box; /* Prevents content from overflowing */
+    box-sizing: border-box;
+    margin-left: 2.5vw;/* Prevents content from overflowing */
   }
   
   .footer-bottom {

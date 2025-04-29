@@ -11,15 +11,6 @@ const SimulatorProfilesNew = () => {
     const {formData, setFormData} = useContext(FormContext);
     const {updated, setUpdated} = useContext(ProfileUpdated);
     const navigate = useNavigate();
-    //if formdat.storename is not '' redirecto to '/simulator-profiles-new' on mount
-    useEffect(() => {
-        console.log(formData.storeName);
-        //use react router instead of windows.location.href
-
-        if(formData.storeName !== ''){
-            navigate('/simulator-profiles');
-        }
-    }, []);
   
     // Handle input changes
     const handleChange = (e) => {
@@ -35,6 +26,7 @@ const SimulatorProfilesNew = () => {
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
+        setUpdated(true);
         navigate('/simulator-profiles');
     };
     if(user === null) {

@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-bottom: 5vh;
     background-color: #f0f4f8; /* light background */
   }
   
@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2vh;
     gap: 30px;
     width: 100%;
     max-width: 900px; /* Ensures the cards stay centered */

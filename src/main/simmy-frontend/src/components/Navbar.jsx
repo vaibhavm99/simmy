@@ -52,7 +52,7 @@ const NavbarComponent = () => {
    const user = useSelector((state) => state.user); // Access the global user data
     return ( 
         <div className="header-banner" style={{ padding: '2vh 0' }} id='header'>
-          <div className="navbar" style={{ width: '100vw' }}>
+          <div className="navbar" style={{ width: '95vw', marginLeft: '2.5vw' }}>
              <Navbar.Brand href="/">
                 <img
                    src={logo}

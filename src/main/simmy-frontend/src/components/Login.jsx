@@ -22,7 +22,8 @@ const Login = () => {
     let credentials = { username: email, password: password };
     const adminCredentials = { username: 'admin@simmy.com', password: 'admin' };
     try {
-      const response = await fetch(`http://localhost:${8080}/login`, {
+      const BASE_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8080';
+      const response = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +31,7 @@ const Login = () => {
         body: JSON.stringify({ username: email, password: password })
       });
       let data = await response.json();
-      
+            
       if (credentials.username == adminCredentials.username && credentials.password == adminCredentials.password)
         {
          data = {

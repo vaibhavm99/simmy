@@ -9,7 +9,7 @@ public class AdSetController {
     @Autowired
     private AdSetService adSetService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = {"http://localhost:3000", "https://newsimmy-645314c66057.herokuapp.com"})
     @RequestMapping(method = RequestMethod.POST, path = "/saveAdSet")
     public boolean createAdSet(@RequestBody AdSet adSet) {
         adSetService.createAdSet(adSet);

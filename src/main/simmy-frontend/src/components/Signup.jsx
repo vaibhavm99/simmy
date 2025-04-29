@@ -18,7 +18,8 @@ const Signup = () => {
   // Modified function to be async and wait for data
   async function getAllusernames() {
     try {
-      const response = await fetch(`http://localhost:${8080}/emails`);
+      const BASE_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8080';
+      const response = await fetch(`${BASE_URL}/emails`);
       const data = await response.json();
       
       console.log("Fetched Emails:", data); // Log the fetched emails directly

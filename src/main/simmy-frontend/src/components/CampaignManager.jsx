@@ -47,7 +47,8 @@ const CampaignManager = () => {
       // console.log(user.username + "_" + campaignName);
 
       // Send data to the backend
-      fetch(`http://localhost:${8080}/saveCampaign`, {
+      const BASE_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8080';
+      fetch(`${BASE_URL}/saveCampaign`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -14,45 +14,53 @@ import { useContext } from "react";
 import { AudienceContext, FormContext } from './FormContext';
 import axios from "axios";
 import { Badge } from "react-bootstrap";
+import { useEffect } from 'react';
 
 export default function Simulation () {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-
   const [displayChart, setDisplayChart] = useState(false);
-
   const [predictions, setPredictions] = useState([]);
-
   const [isLoading, setIsLoading] = useState(false);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const user = useSelector((state) => state.user); // Access the global user data
+  const [simulationText, setSimulationText] = useState("Processing your audience...");
+  
+  const { formData, setFormData } = useContext(FormContext);
+  const { a1data, setA1data } = useContext(AudienceContext);
 
+  // Update windowWidth on window resize
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
 
-  const [simulationText, setSimulationText] = useState("Processing your audience...")
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  const {formData, setFormData} = useContext(FormContext);
-  const {a1data, setA1data} = useContext(AudienceContext);
-  console.log(formData);
+  // Adjust chart size based on windowWidth
+  const chartWidth = windowWidth * 0.9; // 90% of the window width
+  const chartHeight = windowWidth * 0.4; // 40% of the window width
+
   // Toggle dropdown visibility
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  if(user === null) {
+  if (user === null) {
     return (
       <>
-      <NavbarComponent />
-      <div>
-        <h1>Not logged in</h1>
-        <p>Please log in or sign up to view this page</p>
-      </div>
+        <NavbarComponent />
+        <div>
+          <h1>Not logged in</h1>
+          <p>Please log in or sign up to view this page</p>
+        </div>
       </>
     );
   }
 
   const processInput = () => {
     setIsLoading(true);
-    setTimeout(() => {setSimulationText("Running the AI model...")}, 10000);
-    setTimeout(() => {setSimulationText("Predicting your results...")}, 20000);
+    setTimeout(() => { setSimulationText("Running the AI model...") }, 10000);
+    setTimeout(() => { setSimulationText("Predicting your results...") }, 20000);
     axios.post("https://forecastapi-226173475182.us-central1.run.app/forecast", {
       "budget": 100,
       "min_age": 18,
@@ -60,36 +68,24 @@ export default function Simulation () {
       "lower": 500000,
       "upper": 1000000,
       "industry": 0
-    }, {headers: {
+    }, {
+      headers: {
         'accept': 'application/json',
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': true,
-    }})
+      }
+    })
     .then((resp) => {
-      //console.log(resp.data);
       var preds = resp.data.preds;
-      var values = [...Array(25)].map((_, i) => [Number(preds[i*15][0]), Number(preds[i*15][1])]);
-      //console.log(values);
-      setPredictions(values)
+      var values = [...Array(25)].map((_, i) => [Number(preds[i * 15][0]), Number(preds[i * 15][1])]);
+      setPredictions(values);
       setDisplayChart(true);
       setIsLoading(false);
     })
     .catch((err) => {
       console.log(err);
       setIsLoading(false);
-    })
-  }
-
-  if(user === null) {
-    return (
-      <>
-      <NavbarComponent />
-      <div>
-        <h1>Not logged in</h1>
-        <p>Please log in or sign up to view this page</p>
-      </div>
-      </>
-    );
+    });
   }
 
   return (
@@ -98,13 +94,13 @@ export default function Simulation () {
       <nav className="navbar">
         <div className="navbar-left">
           <div className="logo">
-          <Navbar.Brand href="/">
-                <img
-                   src={logo}
-                   className="d-inline-block align-top"
-                   alt="React Bootstrap logo"
-                   />
-             </Navbar.Brand>
+            <Navbar.Brand href="/">
+              <img
+                src={logo}
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+              />
+            </Navbar.Brand>
           </div>
         </div>
         <div className="navbar-right">
@@ -112,19 +108,19 @@ export default function Simulation () {
           <a href="/knowledge-center">Knowledge Center</a>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <button onClick={toggleDropdown} className="dropdown-toggle">
-            {user.name}
+              {user.name}
             </button>
             <div className="dropdown-menu">
               <a href="/profile">Dashboard</a>
-                <a href="/settings">Settings</a>
-                <a href="/billing">Campaign History</a>
+              <a href="/settings">Settings</a>
+              <a href="/billing">Campaign History</a>
               <a href="/logout">Logout</a>
             </div>
           </div>
         </div>
       </nav>
 
-    <Container>
+  <Container>
     {(a1data.length > 0) && 
       <Row>
         <Card style={{ width: '85vw', marginLeft: '2.5vw' }}>
@@ -197,5 +193,5 @@ export default function Simulation () {
     </Row>}
     </Container>
     </div>
-  )
+  );
 }

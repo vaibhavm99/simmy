@@ -64,7 +64,8 @@ const AdManager = () => {
       });
 
       // Send data to the backend
-      fetch(`http://localhost:${8080}/saveAd`, {
+      const BASE_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8080';
+      fetch(`${BASE_URL}/saveAd`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
